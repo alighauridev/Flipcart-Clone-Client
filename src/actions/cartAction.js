@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "../api/axios";
 import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART, SAVE_SHIPPING_INFO } from "../constants/cartConstants";
 
 // add to cart
