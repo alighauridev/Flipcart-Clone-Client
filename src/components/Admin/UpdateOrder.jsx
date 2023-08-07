@@ -51,7 +51,7 @@ const UpdateOrder = () => {
 
   return (
     <>
-      <MetaData title="Admin: Update Order | Flipkart" />
+      <MetaData title="Admin: Update Order | MNFST" />
 
       {loading ? (
         <Loading />

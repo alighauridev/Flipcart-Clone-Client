@@ -256,7 +256,7 @@ const ProductDetails = () => {
                           <LocalOfferIcon sx={{ fontSize: "20px" }} />
                         </span>
                         <span className="font-medium ml-2">Bank Offer</span> 15%
-                        Instant discount on first Flipkart Pay Later order of
+                        Instant discount on first MNFST Pay Later order of
                         500 and above{" "}
                         <Link className="text-primary-blue font-medium" to="/">
                           T&C
@@ -348,7 +348,7 @@ const ProductDetails = () => {
                   </div>
                   {/* <!-- seller details --> */}
 
-                  {/* <!-- flipkart plus banner --> */}
+                  {/* <!-- MNFST plus banner --> */}
                   <div className="sm:w-1/2 mt-4 border">
                     <img
                       draggable="false"
@@ -357,7 +357,7 @@ const ProductDetails = () => {
                       alt=""
                     />
                   </div>
-                  {/* <!-- flipkart plus banner --> */}
+                  {/* <!-- MNFST plus banner --> */}
 
                   {/* <!-- description details --> */}
                   <div className="flex flex-col sm:flex-row gap-1 sm:gap-14 mt-4 items-stretch text-sm">

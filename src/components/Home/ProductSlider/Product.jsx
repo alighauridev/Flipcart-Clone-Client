@@ -40,7 +40,7 @@ const Product = (props) => {
         <div className="w-36 h-36">
           <img
             draggable="false"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
             src={images[0].url}
             alt={name}
           />

@@ -12,31 +12,31 @@ const footerLinks = [
     links: [
       {
         name: "Contact Us",
-        redirect: "https://www.flipkart.com/helpcentre",
+        redirect: "https://www.MNFST.com/helpcentre",
       },
       {
         name: "About Us",
-        redirect: "https://www.flipkart.com/about-us",
+        redirect: "https://www.MNFST.com/about-us",
       },
       {
         name: "Careers",
-        redirect: "https://www.flipkartcareers.com",
+        redirect: "https://www.MNFSTcareers.com",
       },
       {
-        name: "Flipkart Stories",
-        redirect: "https://stories.flipkart.com",
+        name: "MNFST Stories",
+        redirect: "https://stories.MNFST.com",
       },
       {
         name: "Press",
-        redirect: "https://stories.flipkart.com/category/top-stories/news",
+        redirect: "https://stories.MNFST.com/category/top-stories/news",
       },
       {
-        name: "Flipkart Wholesale",
-        redirect: "https://www.flipkartwholesale.com",
+        name: "MNFST Wholesale",
+        redirect: "https://www.MNFSTwholesale.com",
       },
       {
         name: "Corporate Information",
-        redirect: "https://www.flipkart.com/corporate-information",
+        redirect: "https://www.MNFST.com/corporate-information",
       },
     ]
   },
@@ -45,19 +45,19 @@ const footerLinks = [
     links: [
       {
         name: "Payments",
-        redirect: "https://www.flipkart.com/pages/payments",
+        redirect: "https://www.MNFST.com/pages/payments",
       },
       {
         name: "Shipping",
-        redirect: "https://www.flipkart.com/pages/shipping",
+        redirect: "https://www.MNFST.com/pages/shipping",
       },
       {
         name: "Cancellation & Returns",
-        redirect: "https://www.flipkart.com/helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG",
+        redirect: "https://www.MNFST.com/helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG",
       },
       {
         name: "FAQ",
-        redirect: "https://www.flipkart.com/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG",
+        redirect: "https://www.MNFST.com/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG",
       }
     ]
   },
@@ -66,27 +66,27 @@ const footerLinks = [
     links: [
       {
         name: "Return Policy",
-        redirect: "https://www.flipkart.com/pages/returnpolicy",
+        redirect: "https://www.MNFST.com/pages/returnpolicy",
       },
       {
         name: "Terms Of Use",
-        redirect: "https://www.flipkart.com/pages/terms",
+        redirect: "https://www.MNFST.com/pages/terms",
       },
       {
         name: "Security",
-        redirect: "https://www.flipkart.com/pages/paymentsecurity",
+        redirect: "https://www.MNFST.com/pages/paymentsecurity",
       },
       {
         name: "Privacy",
-        redirect: "https://www.flipkart.com/pages/privacypolicy",
+        redirect: "https://www.MNFST.com/pages/privacypolicy",
       },
       {
         name: "Sitemap",
-        redirect: "https://www.flipkart.com/sitemap",
+        redirect: "https://www.MNFST.com/sitemap",
       },
       {
         name: "EPR Compliance",
-        redirect: "https://www.flipkart.com/pages/ewaste-compliance-tnc",
+        redirect: "https://www.MNFST.com/pages/ewaste-compliance-tnc",
       },
     ]
   },
@@ -95,15 +95,15 @@ const footerLinks = [
     links: [
       {
         name: "Facebook",
-        redirect: "https://www.facebook.com/flipkart",
+        redirect: "https://www.facebook.com/MNFST",
       },
       {
         name: "Twitter",
-        redirect: "https://twitter.com/flipkart",
+        redirect: "https://twitter.com/MNFST",
       },
       {
         name: "YouTube",
-        redirect: "https://www.youtube.com/flipkart",
+        redirect: "https://www.youtube.com/MNFST",
       }
     ]
   }
@@ -122,14 +122,14 @@ const Footer = () => {
     <>
       {!adminRoute && (
         <>
-          <footer className="mt-20 w-full py-1 sm:py-4 px-4 sm:px-12 bg-primary-darkBlue text-white text-xs border-b border-gray-600 flex flex-col sm:flex-row overflow-hidden">
+          <footer className="mt-20 w-full py-1 sm:py-4 px-4 sm:px-12 bg-[#1d1d1d] text-white text-xs border-b border-gray-600 flex flex-col sm:flex-row overflow-hidden ">
             <div className="w-full sm:w-7/12 flex flex-col sm:flex-row">
 
               {footerLinks.map((el, i) => (
                 <div className="w-full sm:w-1/5 flex flex-col gap-2 my-3 sm:my-6 ml-5" key={i}>
                   <h2 className="text-primary-grey mb-2 uppercase">{el.title}</h2>
                   {el.links.map((item, i) => (
-                    <a href={item.redirect} target="_blank" rel="noreferrer" className="hover:underline" key={i}>{item.name}</a>
+                    <a href='#' target="_blank" rel="noreferrer" className="hover:underline" key={i}>{item.name}</a>
                   ))}
 
                 </div>
@@ -141,7 +141,7 @@ const Footer = () => {
             <div className="w-full sm:w-5/12 my-6 mx-5 sm:mx-0 flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between">
               <div className="w-full sm:w-1/2">
                 <h2 className="text-primary-grey">Mail Us:</h2>
-                <p className="mt-2 leading-5">Flipkart Internet Private Limited,<br />
+                <p className="mt-2 leading-5">MNFST Internet Private Limited,<br />
                   Buildings Alyssa, Begonia &<br />
                   Clove Embassy Tech Village,<br />
                   Outer Ring Road, Devarabeesanahalli Village,<br />
@@ -152,7 +152,7 @@ const Footer = () => {
 
               <div className="w-full sm:w-1/2">
                 <h2 className="text-primary-grey">Registered Office Address:</h2>
-                <p className="mt-2 leading-5">Flipkart Internet Private Limited,<br />
+                <p className="mt-2 leading-5">MNFST Internet Private Limited,<br />
                   Buildings Alyssa, Begonia &<br />
                   Clove Embassy Tech Village,<br />
                   Outer Ring Road, Devarabeesanahalli Village,<br />
@@ -167,22 +167,22 @@ const Footer = () => {
           </footer>
           {/* <!-- footer ends --> */}
 
-          <div className="px-16 py-6 w-full bg-primary-darkBlue hidden sm:flex justify-between items-center text-sm text-white">
-            <a href="https://seller.flipkart.com/sell-online" target="_blank" rel="noreferrer" className="flex items-center gap-2">
-              <span className="text-yellow-400"><WorkIcon sx={{ fontSize: "20px" }} /></span> Sell On Flipkart
+          <div className="px-16 py-6 w-full bg-[#1d1d1d] hidden sm:flex justify-between items-center text-sm text-white">
+            <a href="#" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <span className="text-yellow-400"><WorkIcon sx={{ fontSize: "20px" }} /></span> Sell On MNFST
             </a>
-            <a href="https://brands.flipkart.com" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+            <a href="#" target="_blank" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><StarsIcon sx={{ fontSize: "20px" }} /></span> Advertise
             </a>
-            <a href="https://www.flipkart.com/the-gift-card-store" rel="noreferrer" target="_blank" className="flex items-center gap-2">
+            <a href="#" rel="noreferrer" target="_blank" className="flex items-center gap-2">
               <span className="text-yellow-400"><CardGiftcardIcon sx={{ fontSize: "20px" }} /></span> Gift Cards
             </a>
-            <a href="https://www.flipkart.com/helpcentre" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+            <a href="#" target="_blank" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><HelpIcon sx={{ fontSize: "20px" }} /></span> Help Center
             </a>
 
-            <span>&copy; 2007-{new Date().getFullYear()} Flipkart.com</span>
-            <img draggable="false" src={paymentMethods} alt="Card Payment" />
+            <span>&copy; 2007-{new Date().getFullYear()} MNFST.com</span>
+            <img draggable="true" src={paymentMethods} alt="Card Payment" />
           </div>
         </>
       )}

@@ -138,7 +138,7 @@ const UserTable = () => {
 
   return (
     <>
-      <MetaData title="Admin Users | Flipkart" />
+      <MetaData title="Admin Users | MNFST" />
 
       {loading && <BackdropLoader />}
 

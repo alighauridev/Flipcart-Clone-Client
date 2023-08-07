@@ -71,7 +71,7 @@ const UpdateProfile = () => {
 
     return (
         <>
-            <MetaData title="Update Profile | Flipkart" />
+            <MetaData title="Update Profile | MNFST" />
 
             {loading && <BackdropLoader />}
             <main className="w-full mt-12 sm:pt-20 sm:mt-0">
@@ -79,7 +79,7 @@ const UpdateProfile = () => {
                 {/* <!-- row --> */}
                 <div className="flex sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow-lg">
                     {/* <!-- sidebar column  --> */}
-                    <div className="loginSidebar bg-primary-blue px-9 py-10 hidden sm:flex flex-col gap-4 w-2/5">
+                    <div className=" bg-[#1d1d1d] px-9 py-10 hidden sm:flex flex-col gap-4 w-2/5">
                         <h1 className="font-medium text-white text-3xl">Looks like you're new here!</h1>
                         <p className="text-gray-200 text-lg pr-2">Sign up with your mobile number to get started</p>
                     </div>

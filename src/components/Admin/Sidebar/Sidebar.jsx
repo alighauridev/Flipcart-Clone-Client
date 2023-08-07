@@ -81,13 +81,14 @@ const Sidebar = ({ activeTab, setToggleSidebar }) => {
           onClick={() => setToggleSidebar(false)}
           className="sm:hidden bg-gray-800 ml-auto rounded-full w-10 h-10 flex items-center justify-center"
         >
-          <CloseIcon />
+          <CloseIcon /> 
         </button>
-      </div>
+      </div>  
 
       <div className="flex flex-col w-full gap-0 my-8">
         {navMenu.map((item, index) => {
           const { icon, label, ref } = item;
+
           return (
             <>
               {label === "Logout" ? (
