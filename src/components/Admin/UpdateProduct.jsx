@@ -376,7 +376,7 @@ const UpdateProduct = () => {
                     </label>
 
                     <div className="flex justify-end">
-                        <input form="mainform" type="submit" className="bg-primary-orange uppercase w-1/3 p-3 text-white font-medium rounded shadow hover:shadow-lg cursor-pointer" value="Update" />
+                        <input form="mainform" type="submit" className="bg-[#24292e]  uppercase w-1/3 p-3 text-white font-medium rounded shadow hover:shadow-lg cursor-pointer" value="Update" />
                     </div>
 
                 </div>

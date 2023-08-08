@@ -2,7 +2,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Searchbar from "./Searchbar";
-import logo from "../../../assets/images/flipkart-095e08.svg";
+import logo from "../../../assets/images/logo.png";
 import PrimaryDropDownMenu from "./PrimaryDropDownMenu";
 import SecondaryDropDownMenu from "./SecondaryDropDownMenu";
 import { useState } from "react";
@@ -11,18 +11,16 @@ import { Link } from "react-router-dom";
 import "../../../scss/header.scss";
 const Header = () => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
-
   const { cartItems } = useSelector((state) => state.cart);
-
   const [togglePrimaryDropDown, setTogglePrimaryDropDown] = useState(false);
   const [toggleSecondaryDropDown, setToggleSecondaryDropDown] = useState(false);
 
   return (
-    <header className="bg-[#222222e6] fixed top-0 py-2.5 w-full z-10">
+    <header className="bg-[#24292e] fixed top-0 py-[15px] w-full z-10">
       {/* <!-- navbar container --> */}
-      <div className="w-full sm:w-9/12 px-1 sm:px-4 m-auto flex justify-between items-center relative max-w-[1280px] mx-auto">
+      <div className="container w-full sm:w-9/12 px-1 sm:px-4 m-auto flex justify-between items-center relative max-w-[1280px] mx-auto">
         {/* <!-- logo & search container --> */}
-        <div className="flex items-center flex-1">
+        <div className="flex items-center gap-[40px] flex-1">
           <Link className="h-7 mr-1 sm:mr-4" to="/">
             <img
               draggable="false"
@@ -37,7 +35,7 @@ const Header = () => {
         {/* <!-- logo & search container --> */}
 
         {/* <!-- right navs --> */}
-        <div className="flex items-center justify-evenly ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative">
+        <div className="flex items-center justify-evenly ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative h-[100%]">
           {isAuthenticated === false ? (
             <Link
               to="/login"
@@ -47,7 +45,7 @@ const Header = () => {
             </Link>
           ) : (
             <span
-              className="userDropDown flex items-center text-black font-medium gap-1 cursor-pointer border"
+              className="userDropDown flex items-center  text-white font-medium gap-1 cursor-pointer "
               onClick={() => setTogglePrimaryDropDown(!togglePrimaryDropDown)}
             >
               {user.name && user.name.split(" ", 1)}

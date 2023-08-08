@@ -114,7 +114,7 @@ const UpdatePassword = () => {
 
                                 </div>
                                 {/* <!-- input container column --> */}
-                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Update</button>
+                                <button type="submit" className="text-white py-3 w-full bg-[#24292e]  shadow hover:shadow-lg rounded-sm font-medium">Update</button>
                                 <Link className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium mb-8" to="/account">Cancel</Link>
                             </div>
 

@@ -29,7 +29,7 @@ const Account = () => {
 
             {loading ? <Loader /> :
                 <>
-                    <MinCategory />
+                    {/* <MinCategory /> */}
                     <main className="w-full mt-12 sm:mt-0">
 
                         {/* <!-- row --> */}

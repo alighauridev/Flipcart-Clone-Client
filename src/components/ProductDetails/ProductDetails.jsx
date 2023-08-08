@@ -143,8 +143,8 @@ const ProductDetails = () => {
       ) : (
         <>
           <MetaData title={product.name} />
-          <MinCategory />
-          <main className="mt-12 sm:mt-0">
+          {/* <MinCategory /> */}
+          <main className="pt-[90px] max-w-[1280px] mx-[auto] ">
             {/* <!-- product image & description container --> */}
             <div className="w-full flex flex-col sm:flex-row bg-white sm:p-2 relative">
               {/* <!-- image wrapper --> */}
@@ -183,7 +183,7 @@ const ProductDetails = () => {
                     {product.stock > 0 && (
                       <button
                         onClick={itemInCart ? goToCart : addToCartHandler}
-                        className="p-4 w-1/2 flex items-center justify-center gap-2 text-white bg-primary-yellow rounded-sm shadow hover:shadow-lg"
+                        className="p-4 w-1/2 flex items-center justify-center gap-2 text-white bg-[#24292e] rounded-sm shadow hover:shadow-lg"
                       >
                         <ShoppingCartIcon />
                         {itemInCart ? "GO TO CART" : "ADD TO CART"}
@@ -195,7 +195,7 @@ const ProductDetails = () => {
                       className={
                         product.stock < 1
                           ? "p-4 w-full flex items-center justify-center gap-2 text-white bg-red-600 cursor-not-allowed rounded-sm shadow hover:shadow-lg"
-                          : "p-4 w-1/2 flex items-center justify-center gap-2 text-white bg-primary-orange rounded-sm shadow hover:shadow-lg"
+                          : "p-4 w-1/2 flex items-center justify-center gap-2 text-white bg-[#222] rounded-sm shadow hover:shadow-lg"
                       }
                     >
                       <FlashOnIcon />
@@ -349,14 +349,14 @@ const ProductDetails = () => {
                   {/* <!-- seller details --> */}
 
                   {/* <!-- MNFST plus banner --> */}
-                  <div className="sm:w-1/2 mt-4 border">
+                  {/* <div className="sm:w-1/2 mt-4 border">
                     <img
                       draggable="false"
                       className="w-full h-full object-contain"
                       src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png"
                       alt=""
                     />
-                  </div>
+                  </div> */}
                   {/* <!-- MNFST plus banner --> */}
 
                   {/* <!-- description details --> */}

@@ -4,9 +4,12 @@ header {
     background-color: white;
     padding: 15px 20px;
 
-    .m-auto {
+    .container {
         width: 100%;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
+        input{
+            font-size: 16px;
+        }
     }
 }

@@ -124,7 +124,7 @@ const UpdateOrder = () => {
                   </FormControl>
                   <button
                     type="submit"
-                    className="bg-primary-orange p-2.5 text-white font-medium rounded shadow hover:shadow-lg"
+                    className="bg-[#24292e]  p-2.5 text-white font-medium rounded shadow hover:shadow-lg"
                   >
                     Update
                   </button>

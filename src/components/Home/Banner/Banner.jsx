@@ -33,8 +33,8 @@ const Banner = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <PreviousBtn />,
-    nextArrow: <NextBtn />,
+    // prevArrow: <PreviousBtn />,
+    // nextArrow: <NextBtn />,
   };
 
   const banners = [

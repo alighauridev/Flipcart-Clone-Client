@@ -48,11 +48,11 @@ const Sidebar = ({ activeTab }) => {
       <div className="flex flex-col bg-white rounded-sm shadow">
         {/* <!-- my orders tab --> */}
         <div className="flex items-center gap-5 px-4 py-4 border-b">
-          <span className="text-primary-blue">
+          <span className="text-[#24292e]">
             <FolderIcon />
           </span>
           <Link
-            className="flex w-full justify-between font-medium text-gray-500 hover:text-primary-blue"
+            className="flex w-full justify-between font-medium text-[#24292e]-500"
             to="/orders"
           >
             MY ORDERS
@@ -65,10 +65,10 @@ const Sidebar = ({ activeTab }) => {
 
         {/* <!-- account settings tab --> */}
         <div className="flex items-center gap-5 px-4 py-4">
-          <span className="text-primary-blue">
+          <span className="text-[#24292e]">
             <PersonIcon />
           </span>
-          <p className="flex w-full justify-between font-medium text-gray-500">
+          <p className="flex w-full justify-between font-medium text-gray-1000">
             ACCOUNT SETTINGS
           </p>
         </div>
@@ -77,22 +77,16 @@ const Sidebar = ({ activeTab }) => {
             to="/account"
             className={`${
               activeTab === "profile"
-                ? "bg-blue-50 text-primary-blue font-medium"
-                : "hover:bg-blue-50 hover:text-primary-blue"
+                ? "bg-gray-100  font-medium"
+                : "hover:bg-gray-100 "
             } p-3 pl-14`}
           >
             Profile Information
           </Link>
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             Manage Addresses
           </Link>
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             PAN Card Information
           </Link>
         </div>
@@ -100,31 +94,25 @@ const Sidebar = ({ activeTab }) => {
 
         {/* <!-- payments tab --> */}
         <div className="flex items-center gap-5 px-4 py-4">
-          <span className="text-primary-blue">
+          <span className="text-[#24292e]">
             <AccountBalanceWalletIcon />
           </span>
-          <p className="flex w-full justify-between font-medium text-gray-500">
+          <p className="flex w-full justify-between font-medium text-gray-1000">
             PAYMENTS
           </p>
         </div>
         <div className="flex flex-col pb-3 border-b text-sm">
           <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue flex justify-between pr-6"
+            className="p-3 pl-14 hover:bg-gray-100 flex justify-between pr-6"
             to="/"
           >
             Gift Cards{" "}
             <span className="font-medium text-primary-green">$0</span>
           </Link>
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             Saved UPI
           </Link>
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-gray-100 " to="/">
             Saved Cards
           </Link>
         </div>
@@ -132,11 +120,11 @@ const Sidebar = ({ activeTab }) => {
 
         {/* <!-- my chats tab --> */}
         <div className="flex items-center gap-5 px-4 py-4 border-b">
-          <span className="text-primary-blue">
+          <span className="text-[#24292e]">
             <ChatIcon />
           </span>
           <Link
-            className="flex w-full justify-between font-medium text-gray-500 hover:text-primary-blue"
+            className="flex w-full justify-between font-medium text-gray-1000"
             to="/"
           >
             MY CHATS
@@ -149,38 +137,29 @@ const Sidebar = ({ activeTab }) => {
 
         {/* <!-- my stuff tab --> */}
         <div className="flex items-center gap-5 px-4 py-4">
-          <span className="text-primary-blue">
+          <span className="text-[#24292e]">
             <FolderSharedIcon />
           </span>
-          <p className="flex w-full justify-between font-medium text-gray-500">
+          <p className="flex w-full justify-between font-medium text-gray-1000">
             MY STUFF
           </p>
         </div>
         <div className="flex flex-col pb-3 border-b text-sm">
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             My Coupons
           </Link>
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             My Reviews & Ratings
           </Link>
-          <Link
-            className="p-3 pl-14 hover:bg-blue-50 hover:text-primary-blue"
-            to="/"
-          >
+          <Link className="p-3 pl-14 hover:bg-bgray-100" to="/">
             All Notifications
           </Link>
           <Link
             to="/wishlist"
             className={`${
               activeTab === "wishlist"
-                ? "bg-blue-50 text-primary-blue font-medium"
-                : "hover:bg-blue-50 hover:text-primary-blue"
+                ? "bg-gray-100 font-medium"
+                : "hover:bg-gray-100"
             } p-3 pl-14`}
           >
             My Wishlist
@@ -190,11 +169,11 @@ const Sidebar = ({ activeTab }) => {
 
         {/* <!-- logout tab --> */}
         <div className="flex items-center gap-5 px-4 py-4 border-b">
-          <span className="text-primary-blue">
+          <span className="text-[#24292e]">
             <PowerSettingsNewIcon />
           </span>
           <div
-            className="flex w-full justify-between font-medium text-gray-500 hover:text-primary-blue cursor-pointer"
+            className="flex w-full justify-between font-medium text-gray-1000 cursor-pointer"
             onClick={handleLogout}
           >
             Logout
@@ -210,7 +189,7 @@ const Sidebar = ({ activeTab }) => {
       {/* <!-- frequenty visited tab --> */}
       <div className="flex flex-col items-start gap-2 p-4 bg-white rounded-sm shadow">
         <span className="text-xs font-medium">Frequently Visited:</span>
-        <div className="flex gap-2.5 text-xs text-gray-500">
+        <div className="flex gap-2.5 text-xs text-gray-1000">
           <Link to="/password/update">Change Password</Link>
           <Link to="/orders">Track Order</Link>
           <Link to="/">Help Center</Link>

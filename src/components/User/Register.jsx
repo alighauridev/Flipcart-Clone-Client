@@ -192,7 +192,7 @@ const Register = () => {
                                         Choose File
                                     </label>
                                 </div>
-                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Signup</button>
+                                <button type="submit" className="text-white py-3 w-full bg-[#24292e] shadow hover:shadow-lg rounded-sm font-medium">Signup</button>
                                 <Link to="/login" className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium">Existing User? Log in</Link>
                             </div>
 

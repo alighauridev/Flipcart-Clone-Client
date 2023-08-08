@@ -46,7 +46,7 @@ const Shipping = () => {
             <main className="w-full mt-20">
 
                 {/* <!-- row --> */}
-                <div className="flex flex-col sm:flex-row gap-3.5 w-full sm:w-11/12 mt-0 sm:mt-4 m-auto sm:mb-7 overflow-hidden">
+                <div className="max-w-[1280px] mx-[auto] flex flex-col sm:flex-row gap-3.5 w-full sm:w-11/12 mt-0 sm:mt-4 m-auto sm:mb-7 overflow-hidden">
 
                     {/* <!-- cart column --> */}
                     <div className="flex-1">
@@ -136,7 +136,7 @@ const Shipping = () => {
 
                                     </div>
 
-                                    <button type="submit" className="bg-primary-orange w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">save and deliver here</button>
+                                    <button type="submit" className="bg-[#24292e] w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">save and deliver here</button>
                                 </form>
                             </div>
                         </Stepper>

@@ -9,7 +9,7 @@ const ProductSlider = ({ title, tagline }) => {
   const { loading, products } = useSelector((state) => state.products);
 
   return (
-    <section className="bg-white w-full shadow overflow-hidden">
+    <section className="bg-white w-full shadow overflow-hidden max-w-[1280px] mx-auto">
       {/* <!-- header --> */}
       <div className="flex px-6 py-4 justify-between items-center">
         <div className="title flex flex-col gap-0.5">
@@ -18,7 +18,7 @@ const ProductSlider = ({ title, tagline }) => {
         </div>
         <Link
           to="/products"
-          className="bg-[#ff7a21] text-xs font-medium text-white px-5 py-2.5 rounded-sm shadow-lg uppercase"
+          className="bg-[#24292e] text-xs font-medium text-white px-5 py-2.5 rounded-sm shadow-lg uppercase"
         >
           view all
         </Link>
@@ -27,7 +27,7 @@ const ProductSlider = ({ title, tagline }) => {
       {loading ? null : (
         <Slider {...settings} className="flex items-center justify-between p-1">
           {products &&
-            getRandomProducts(products, 12).map((product) => (
+            getRandomProducts(products, 4).map((product) => (
               <Product {...product} key={product._id} />
             ))}
         </Slider>

@@ -46,7 +46,7 @@ const Login = () => {
         {/* <!-- row --> */}
         <div className="flex sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow-lg">
           {/* <!-- sidebar column  --> */}
-          <div className=" bg-[#1d1d1d] p-10 pr-12 hidden sm:flex flex-col gap-4 w-2/5">
+          <div className="loginSidebar bg-[#24292e] p-10 pr-12 hidden sm:flex flex-col gap-4 w-2/5">
             <h1 className="font-medium text-white text-3xl">Login</h1>
             <p className="text-gray-200 text-lg">
               Get access to your Orders, Wishlist and Recommendations
@@ -103,7 +103,7 @@ const Login = () => {
                     </p> */}
                     <button
                       type="submit"
-                      className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium"
+                      className="text-white py-3 w-full bg-[#24292e] shadow hover:shadow-lg rounded-sm font-medium"
                     >
                       Login
                     </button>

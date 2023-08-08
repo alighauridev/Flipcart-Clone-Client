@@ -152,7 +152,7 @@ const UpdateProfile = () => {
                                         Choose File
                                     </label>
                                 </div>
-                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow rounded-sm font-medium hover:shadow-lg">Update</button>
+                                <button type="submit" className="text-white py-3 w-full bg-[#24292e]  shadow rounded-sm font-medium hover:shadow-lg">Update</button>
                                 <Link className="hover:bg-gray-100 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium" to="/account">Cancel</Link>
                             </div>
 
