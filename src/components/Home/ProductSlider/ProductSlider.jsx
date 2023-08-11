@@ -27,7 +27,7 @@ const ProductSlider = ({ title, tagline }) => {
       {loading ? null : (
         <Slider {...settings} className="flex items-center justify-between p-1">
           {products &&
-            getRandomProducts(products, 4).map((product) => (
+            getRandomProducts(products, 12).map((product) => (
               <Product {...product} key={product._id} />
             ))}
         </Slider>

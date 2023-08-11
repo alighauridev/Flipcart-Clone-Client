@@ -37,7 +37,7 @@ const Product = (props) => {
         to={`/product/${_id}`}
         className="flex flex-col items-center text-center group"
       >
-        <div className="w-36 h-36">
+        <div className="w-full h-[300px]">
           <img
             draggable="false"
             className="w-full h-full object-cover"

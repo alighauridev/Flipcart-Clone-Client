@@ -16,7 +16,7 @@ const Header = () => {
   const [toggleSecondaryDropDown, setToggleSecondaryDropDown] = useState(false);
 
   return (
-    <header className="bg-[#24292e] fixed top-0 py-[15px] w-full z-10">
+    <header className="bg-[#24292e] relative py-[15px] w-full z-10">
       {/* <!-- navbar container --> */}
       <div className="container w-full sm:w-9/12 px-1 sm:px-4 m-auto flex justify-between items-center relative max-w-[1280px] mx-auto">
         {/* <!-- logo & search container --> */}
