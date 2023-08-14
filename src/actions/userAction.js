@@ -36,6 +36,7 @@ import {
     ALL_USERS_SUCCESS,
     ALL_USERS_REQUEST,
 } from '../constants/userConstants';
+import Cookies from 'js-cookie';
 import axios from "../api/axios";
 
 // Login User
@@ -60,6 +61,7 @@ export const loginUser = (email, password) => async (dispatch) => {
             type: LOGIN_USER_SUCCESS,
             payload: data.user,
         });
+        Cookies.set('token', data.token, { expires: 7 });
 
     } catch (error) {
         dispatch({
@@ -91,7 +93,7 @@ export const registerUser = (userData) => async (dispatch) => {
             type: REGISTER_USER_SUCCESS,
             payload: data.user,
         });
-
+        Cookies.set('token', data.token, { expires: 7 });
     } catch (error) {
         dispatch({
             type: REGISTER_USER_FAIL,

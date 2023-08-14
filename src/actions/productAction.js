@@ -139,7 +139,11 @@ export const getAdminProducts = () => async (dispatch) => {
     try {
         dispatch({ type: ADMIN_PRODUCTS_REQUEST });
 
-        const { data } = await axios.get("/api/v1/admin/products");
+
+        const { data } = await axios.get("/api/v1/admin/prods", {
+            withCredentials: true, // Include cookies in the request
+        });
+
 
         dispatch({
             type: ADMIN_PRODUCTS_SUCCESS,
