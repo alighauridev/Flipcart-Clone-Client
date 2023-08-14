@@ -1,6 +1,7 @@
 const urls = {
-  baseUrl: "https://flipcart-server.onrender.com/",
-  // baseUrl: "http://localhost:4000/",
+
+  // baseUrl: "https://flipcart-server.onrender.com/",
+  baseUrl: "http://localhost:4000/",
   auth: {
     login: "/auth/login",
     signup: "/auth/signup",

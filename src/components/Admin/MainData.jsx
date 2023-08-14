@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Chart from "chart.js/auto";
 import { Doughnut, Line, Pie, Bar } from "react-chartjs-2";
-import { getAdminProducts } from "../../actions/productAction";
+import { getAdminProducts, getProducts } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllOrders } from "../../actions/orderAction";
 import { getAllUsers } from "../../actions/userAction";
@@ -25,6 +25,7 @@ const MainData = () => {
 
   useEffect(() => {
     dispatch(getAdminProducts());
+    dispatch(getProducts());
     dispatch(getAllOrders());
     dispatch(getAllUsers());
   }, [dispatch]);

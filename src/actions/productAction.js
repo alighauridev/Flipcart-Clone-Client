@@ -140,7 +140,7 @@ export const getAdminProducts = () => async (dispatch) => {
         dispatch({ type: ADMIN_PRODUCTS_REQUEST });
 
 
-        const { data } = await axios.get("/api/v1/admin/prods", {
+        const { data } = await axios.get("/api/v1/products/all", {
             withCredentials: true, // Include cookies in the request
         });
 
@@ -182,6 +182,7 @@ export const createProduct = (productData) => async (dispatch) => {
 
 // Update Product ---ADMIN
 export const updateProduct = (id, productData) => async (dispatch) => {
+    console.log(id, productData);
     try {
         dispatch({ type: UPDATE_PRODUCT_REQUEST });
         const config = { header: { "Content-Type": "application/json" } };

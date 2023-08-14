@@ -7,6 +7,7 @@ import {
   clearErrors,
   deleteProduct,
   getAdminProducts,
+  getProducts,
 } from "../../actions/productAction";
 import Rating from "@mui/material/Rating";
 import { DELETE_PRODUCT_RESET } from "../../constants/productConstants";
@@ -39,6 +40,7 @@ const ProductTable = () => {
       dispatch({ type: DELETE_PRODUCT_RESET });
     }
     dispatch(getAdminProducts());
+    dispatch(getProducts());
   }, [dispatch, error, deleteError, isDeleted, enqueueSnackbar]);
 
   const deleteProductHandler = (id) => {
