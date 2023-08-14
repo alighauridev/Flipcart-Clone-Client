@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="bg-[#24292e] relative py-[15px] w-full z-10">
       {/* <!-- navbar container --> */}
-      <div className="container w-full sm:w-9/12 px-1 sm:px-4 m-auto flex justify-between items-center relative max-w-[1280px] mx-auto">
+      <div className="container w-full sm:w-9/12 m-auto flex justify-between items-center relative max-w-[1280px] mx-auto px-0 py-0">
         {/* <!-- logo & search container --> */}
         <div className="flex items-center gap-[40px] flex-1">
           <Link className="h-7 mr-1 sm:mr-4" to="/">

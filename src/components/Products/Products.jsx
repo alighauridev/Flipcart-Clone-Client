@@ -81,7 +81,7 @@ const Products = () => {
       <MetaData title="All Products | MNFST" />
 
       {/* <MinCategory /> */}
-      <main className="w-full mt-14 sm:mt-0">
+      <main className="w-full mt-14 sm:mt-0 pt-[80px]">
         {/* <!-- row --> */}
         <div className="flex gap-3 mt-2 sm:mt-2 sm:mx-3 m-auto mb-7">
           {/* <!-- sidebar column  --> */}
