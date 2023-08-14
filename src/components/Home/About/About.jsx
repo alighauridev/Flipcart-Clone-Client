@@ -11,13 +11,15 @@ const About = () => {
           <div className="grid">
             <div className="box">
               <img
-                src={img1}
+                src={
+                  "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
                 alt="About-Img-1"
                 className="w-[100%] object-contain"
               />
               <div className="img_des transition-all">
-                <span>Best Action Game</span>
-                <h1>DEAD RISING ZOMBIES</h1>
+                <span>Collection 2023</span>
+                <h1>Collection Name</h1>
                 <button>
                   <Link to="/products?category=Shirts">Shop Shirts</Link>
                 </button>
@@ -25,15 +27,17 @@ const About = () => {
             </div>
             <div className="box">
               <img
-                src={img2}
+                src={
+                  "https://static01.nyt.com/images/2023/03/29/world/29brazil-yankees-dispatch/29brazil-yankees-dispatch-jumbo.jpg?quality=75&auto=webp"
+                }
                 alt="About-Img-2"
                 className="w-[100%] 
             
             object-contain"
               />
               <div className="img_des transition-all">
-                <span>3D Pixel Racing</span>
-                <h1>FAST DRIVE RACING</h1>
+                <span>Collection 2023</span>
+                <h1>Collection Name</h1>
                 <button>
                   <Link to="/products?category=Caps">Shop Caps</Link>
                 </button>

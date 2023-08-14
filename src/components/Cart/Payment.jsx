@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../api/axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import PriceSidebar from "./PriceSidebar";
@@ -18,10 +18,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import MetaData from "../Layouts/MetaData";
+import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
   // const stripe = useStripe();
   // const elements = useElements();
@@ -37,24 +37,57 @@ const Payment = () => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
+  const navigate = useNavigate();
   const paymentData = {
     amount: Math.round(totalPrice),
+    user: user._id,
+    currency: "USD",
     email: user.email,
     phoneNo: shippingInfo.phoneNo,
+    billing_details: {
+      name: user.name,
+      email: user.email,
+      address: {
+        line1: shippingInfo.address,
+        city: shippingInfo.city,
+        country: shippingInfo.country,
+        state: shippingInfo.state,
+        postal_code: shippingInfo.pincode,
+      },
+    },
   };
 
-  // const order = {
-  //     shippingInfo,
-  //     orderItems: cartItems,
-  //     totalPrice,
-  // }
-
+  const order = {
+    shippingInfo,
+    orderItems: cartItems,
+    totalPrice,
+    user: user._id,
+  };
   const submitHandler = async (e) => {
     e.preventDefault();
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    try {
+      const orderResponse = await axios.post("/api/v1/order/new", order);
+      const orderId = orderResponse.data.order._id;
 
-    // paymentBtn.current.disabled = true;
-    setPayDisable(true);
+      // Await the payment API call
+      const { data } = await axios.post(
+        "/api/v1/create-payment",
+        { ...paymentData, orderId },
+        config
+      );
+      if (data?.hosted_url) {
+        window.location.replace(data.hosted_url);
+      }
+    } catch (error) {}
+  };
+
+  const submitPayment = async (e) => {
+    e.preventDefault();
 
     try {
       const config = {
@@ -62,60 +95,7 @@ const Payment = () => {
           "Content-Type": "application/json",
         },
       };
-
-      const { data } = await axios.post(
-        "/api/v1/payment/process",
-        paymentData,
-        config
-      );
-
-      let info = {
-        action: "https://securegw-stage.paytm.in/order/process",
-        params: data.paytmParams,
-      };
-
-      post(info);
-
-      // if (!stripe || !elements) return;
-
-      // const result = await stripe.confirmCardPayment(client_secret, {
-      //     payment_method: {
-      //         card: elements.getElement(CardNumberElement),
-      //         billing_details: {
-      //             name: user.name,
-      //             email: user.email,
-      //             address: {
-      //                 line1: shippingInfo.address,
-      //                 city: shippingInfo.city,
-      //                 country: shippingInfo.country,
-      //                 state: shippingInfo.state,
-      //                 postal_code: shippingInfo.pincode,
-      //             },
-      //         },
-      //     },
-      // });
-
-      // if (result.error) {
-      //     paymentBtn.current.disabled = false;
-      //     enqueueSnackbar(result.error.message, { variant: "error" });
-      // } else {
-      //     if (result.paymentIntent.status === "succeeded") {
-
-      //         order.paymentInfo = {
-      //             id: result.paymentIntent.id,
-      //             status: result.paymentIntent.status,
-      //         };
-
-      //         dispatch(newOrder(order));
-      //         dispatch(emptyCart());
-
-      //         navigate("/order/success");
-      //     } else {
-      //         enqueueSnackbar("Processing Payment Failed!", { variant: "error" });
-      //     }
-      // }
     } catch (error) {
-      // paymentBtn.current.disabled = false;
       setPayDisable(false);
       enqueueSnackbar(error, { variant: "error" });
     }
@@ -147,11 +127,9 @@ const Payment = () => {
                   <FormControl>
                     <RadioGroup
                       aria-labelledby="payment-radio-group"
-                      defaultValue="paytm"
                       name="payment-radio-button"
                     >
                       <FormControlLabel
-                        value="paytm"
                         control={<Radio />}
                         label={
                           <div className="flex items-center gap-4">
@@ -161,7 +139,7 @@ const Payment = () => {
                               src="https://rukminim1.flixcart.com/www/96/96/promos/01/09/2020/a07396d4-0543-4b19-8406-b9fcbf5fd735.png"
                               alt="Paytm Logo"
                             />
-                            <span>Paytm</span>
+                            <span>Crypto</span>
                           </div>
                         }
                       />
