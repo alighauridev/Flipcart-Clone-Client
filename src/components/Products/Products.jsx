@@ -110,7 +110,7 @@ const Products = () => {
                     valueLabelDisplay="auto"
                     getAriaLabel={() => "Price range slider"}
                     min={0}
-                    max={200000}
+                    max={1000}
                   />
 
                   <div className="flex gap-3 items-center justify-between mb-2 min-w-full">

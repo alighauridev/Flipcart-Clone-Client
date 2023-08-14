@@ -7,6 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "../../../scss/banner.scss";
 import bannerImg1 from "../../../assets/images/Banners/main-banner-1_1903x.webp";
 import bannerImg2 from "../../../assets/images/Banners/main-banner-2_1903x.webp";
+import { Link } from "react-router-dom";
 
 export const PreviousBtn = ({ className, onClick }) => {
   return (
@@ -68,7 +69,7 @@ const Banner = () => {
                   <span>{el.subHeading}</span>
                   <h1>{el.heading}</h1>
                   <button>
-                    <a href="#">Shop Now</a>
+                    <Link to="/products">Shop Now</Link>
                   </button>
                 </div>
               </div>

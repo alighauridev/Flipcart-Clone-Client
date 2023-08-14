@@ -35,7 +35,7 @@ const Header = () => {
         {/* <!-- logo & search container --> */}
 
         {/* <!-- right navs --> */}
-        <div className="flex items-center justify-evenly ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative h-[100%]">
+        <div className="flex items-center justify-end ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative h-[100%]">
           {isAuthenticated === false ? (
             <Link
               to="/login"
@@ -66,7 +66,7 @@ const Header = () => {
             />
           )}
 
-          <span
+          {/* <span
             className="moreDropDown hidden sm:flex items-center text-white font-medium gap-1 cursor-pointer"
             onClick={() => setToggleSecondaryDropDown(!toggleSecondaryDropDown)}
             // style={{ color: "black" }}
@@ -79,9 +79,9 @@ const Header = () => {
                 <ExpandMoreIcon sx={{ fontSize: "16px" }} />
               )}
             </span>
-          </span>
+          </span> */}
 
-          {toggleSecondaryDropDown && <SecondaryDropDownMenu />}
+          {/* {toggleSecondaryDropDown && <SecondaryDropDownMenu />} */}
 
           <Link
             to="/cart"

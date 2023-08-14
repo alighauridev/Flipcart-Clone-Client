@@ -31,16 +31,6 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
 
   const navs = [
     {
-      title: "Supercoin Zone",
-      icon: <OfflineBoltIcon sx={{ fontSize: "18px", color: "#24292e" }} />,
-      redirect: "/",
-    },
-    {
-      title: "MNFST Plus Zone",
-      icon: <AddCircleIcon sx={{ fontSize: "18px", color: "#24292e" }} />,
-      redirect: "/",
-    },
-    {
       title: "Orders",
       icon: <ShoppingBagIcon sx={{ fontSize: "18px", color: "#24292e" }} />,
       redirect: "/orders",
@@ -49,30 +39,6 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
       title: "Wishlist",
       icon: <FavoriteIcon sx={{ fontSize: "18px", color: "#24292e" }} />,
       redirect: "/wishlist",
-    },
-    {
-      title: "My Chats",
-      icon: <ChatIcon sx={{ fontSize: "18px", color: "#24292e" }} />,
-      redirect: "/",
-    },
-    {
-      title: "Coupons",
-      icon: (
-        <ConfirmationNumberIcon sx={{ fontSize: "18px", color: "#24292e" }} />
-      ),
-      redirect: "/",
-    },
-    {
-      title: "Gift Cards",
-      icon: (
-        <AccountBalanceWalletIcon sx={{ fontSize: "18px", color: "#24292e" }} />
-      ),
-      redirect: "/",
-    },
-    {
-      title: "Notifications",
-      icon: <NotificationsIcon sx={{ fontSize: "18px", color: "#24292e" }} />,
-      redirect: "/",
     },
   ];
 

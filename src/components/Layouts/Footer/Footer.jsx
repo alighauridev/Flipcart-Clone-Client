@@ -156,15 +156,6 @@ const Footer = () => {
                     <h2 className="text-primary-grey">Mail Us:</h2>
                     <p className="mt-2 leading-5">
                       MNFST Internet Private Limited,
-                      <br />
-                      Buildings Alyssa, Begonia &<br />
-                      Clove Embassy Tech Village,
-                      <br />
-                      Outer Ring Road, Devarabeesanahalli Village,
-                      <br />
-                      Bengaluru, 560103,
-                      <br />
-                      Karnataka, India
                     </p>
                   </div>
 
@@ -173,17 +164,8 @@ const Footer = () => {
                       Registered Office Address:
                     </h2>
                     <p className="mt-2 leading-5">
-                      MNFST Internet Private Limited,
-                      <br />
-                      Buildings Alyssa, Begonia &<br />
-                      Clove Embassy Tech Village,
-                      <br />
-                      Outer Ring Road, Devarabeesanahalli Village,
-                      <br />
-                      Bengaluru, 560103,
-                      <br />
-                      Karnataka, India <br />
-                      CIN : U51109KA2012PTC066107
+                      MNFST Internet Private Limited, CIN :
+                      U51109KA2012PTC066107
                       <br />
                       Telephone:{" "}
                       <a className="text-primary-blue" href="tel:18002029898">
@@ -196,53 +178,7 @@ const Footer = () => {
               {/* <!-- footer ends --> */}
 
               <div className="px-16 py-6 w-full bg-[#24292e] hidden sm:flex justify-between items-center text-sm text-white">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <span className="text-yellow-400">
-                    <WorkIcon sx={{ fontSize: "20px" }} />
-                  </span>{" "}
-                  Sell On MNFST
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <span className="text-yellow-400">
-                    <StarsIcon sx={{ fontSize: "20px" }} />
-                  </span>{" "}
-                  Advertise
-                </a>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="flex items-center gap-2"
-                >
-                  <span className="text-yellow-400">
-                    <CardGiftcardIcon sx={{ fontSize: "20px" }} />
-                  </span>{" "}
-                  Gift Cards
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <span className="text-yellow-400">
-                    <HelpIcon sx={{ fontSize: "20px" }} />
-                  </span>{" "}
-                  Help Center
-                </a>
-
-                <span>&copy; 2007-{new Date().getFullYear()} MNFST.com</span>
-                <img draggable="true" src={paymentMethods} alt="Card Payment" />
+                <span>&copy; {new Date().getFullYear()} MNFST.com</span>
               </div>
             </div>
           </footer>

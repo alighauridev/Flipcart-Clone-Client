@@ -2,6 +2,7 @@ import React from "react";
 import "../../../scss/about.scss";
 import img1 from "../../../assets/images/About/Cyberpunk_2077_Key_Art_Hero_1280x.webp";
 import img2 from "../../../assets/images/About/The_Witcher_Geralt_Hero_1280x (1).webp";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
@@ -18,7 +19,7 @@ const About = () => {
                 <span>Best Action Game</span>
                 <h1>DEAD RISING ZOMBIES</h1>
                 <button>
-                  <a href="#">Shop Now</a>
+                  <Link to="/products?category=Shirts">Shop Shirts</Link>
                 </button>
               </div>
             </div>
@@ -34,7 +35,7 @@ const About = () => {
                 <span>3D Pixel Racing</span>
                 <h1>FAST DRIVE RACING</h1>
                 <button>
-                  <a href="#">Shop Now</a>
+                  <Link to="/products?category=Caps">Shop Caps</Link>
                 </button>
               </div>
             </div>
