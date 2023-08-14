@@ -96,12 +96,15 @@ export const getProductDetails = (id) => async (dispatch) => {
     }
 };
 
-// New/Update Review
-export const newReview = (reviewData) => async (dispatch) => {
+export const newReview = (rating, comment, productId) => async (dispatch, getState) => {
     try {
         dispatch({ type: NEW_REVIEW_REQUEST });
-        const config = { header: { "Content-Type": "application/json" } };
-        const { data } = await axios.put("/api/v1/review", reviewData, config);
+
+        const { user } = getState().user; // Get the user object from Redux state
+        const reviewWithUserId = { rating, comment, productId, user: user._id, name: user.name }; // Include user ID in the review data
+
+        const config = { headers: { "Content-Type": "application/json" } };
+        const { data } = await axios.put("/api/v1/review", reviewWithUserId, config);
 
         dispatch({
             type: NEW_REVIEW_SUCCESS,

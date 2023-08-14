@@ -34,21 +34,27 @@ const Home = () => {
         {!loading && (
           <ProductSlider
             title={"Suggested for You"}
-            tagline={"Based on Your Activity"}
+            tagline={"Shirts"}
+            patho={"/products?category=Shirts"}
+            category={"Shirts"}
           />
         )}
         {/* <DealSlider title={"Top Brands, Best Price"} /> */}
         {!loading && (
           <ProductSlider
             title={"You May Also Like..."}
-            tagline={"Based on Your Interest"}
+            tagline={"Caps"}
+            patho={"/products?category=Caps"}
+            category={"Caps"}
           />
         )}
         {/* <DealSlider title={"Top Offers On"} /> */}
         {!loading && (
           <ProductSlider
             title={"Don't Miss These!"}
-            tagline={"Inspired by your order"}
+            tagline={"Hoodies"}
+            patho={"/products?category=Hoodies"}
+            category={"Hoodies"}
           />
         )}
       </main>

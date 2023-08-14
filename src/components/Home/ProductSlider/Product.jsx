@@ -35,7 +35,7 @@ const Product = (props) => {
       {/* <!-- image & product title --> */}
       <Link
         to={`/product/${_id}`}
-        className="flex flex-col items-center text-center group"
+        className="flex flex-col w-[100%] items-center text-center group"
       >
         <div className="w-full h-[300px]">
           <img

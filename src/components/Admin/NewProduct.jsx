@@ -106,10 +106,10 @@ const NewProduct = () => {
       enqueueSnackbar("Add Highlights", { variant: "warning" });
       return;
     }
-    if (!logo) {
-      enqueueSnackbar("Add Brand Logo", { variant: "warning" });
-      return;
-    }
+    // if (!logo) {
+    //   enqueueSnackbar("Add Brand Logo", { variant: "warning" });
+    //   return;
+    // }
     if (specs.length <= 1) {
       enqueueSnackbar("Add Minimum 2 Specifications", { variant: "warning" });
       return;
@@ -128,8 +128,8 @@ const NewProduct = () => {
     formData.set("category", category);
     formData.set("stock", stock);
     formData.set("warranty", warranty);
-    formData.set("brandname", brand);
-    formData.set("logo", logo);
+    // formData.set("brandname", brand);
+    // formData.set("logo", logo);
     formData.set("user", _id);
 
     images.forEach((image) => {
@@ -298,7 +298,7 @@ const NewProduct = () => {
             </div>
           </div>
 
-          <h2 className="font-medium">Brand Details</h2>
+          {/* <h2 className="font-medium">Brand Details</h2>
           <div className="flex justify-between gap-4 items-start">
             <TextField
               label="Brand"
@@ -331,7 +331,7 @@ const NewProduct = () => {
               />
               Choose Logo
             </label>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col gap-2 m-2 sm:w-1/2">

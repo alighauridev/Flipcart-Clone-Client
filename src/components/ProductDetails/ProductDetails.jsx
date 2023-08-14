@@ -42,7 +42,6 @@ const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  // reviews toggle
   const [open, setOpen] = useState(false);
   const [viewAll, setViewAll] = useState(false);
   const [rating, setRating] = useState(0);
@@ -69,13 +68,13 @@ const ProductDetails = () => {
     nextArrow: <NextBtn />,
   };
 
-  const productId = params.id;
+  const productId = params?.id;
   const itemInWishlist = wishlistItems.some((i) => i.product === productId);
 
   const addToWishlistHandler = () => {
     if (itemInWishlist) {
       dispatch(removeFromWishlist(productId));
-      enqueueSnackbar("Remove From Wishlist", { variant: "success" });
+      enqueueSnackbar("Removed From Wishlist", { variant: "success" });
     } else {
       dispatch(addToWishlist(productId));
       enqueueSnackbar("Added To Wishlist", { variant: "success" });
@@ -84,14 +83,10 @@ const ProductDetails = () => {
 
   const reviewSubmitHandler = () => {
     if (rating === 0 || !comment.trim()) {
-      enqueueSnackbar("Empty Review", { variant: "error" });
+      enqueueSnackbar("Please provide a valid review.", { variant: "error" });
       return;
     }
-    const formData = new FormData();
-    formData.set("rating", rating);
-    formData.set("comment", comment);
-    formData.set("productId", productId);
-    dispatch(newReview(formData));
+    dispatch(newReview(productId, rating, comment));
     setOpen(false);
   };
 
@@ -130,12 +125,13 @@ const ProductDetails = () => {
     }
     dispatch(getProductDetails(productId));
     // eslint-disable-next-line
-  }, [dispatch, productId, error, reviewError, success, enqueueSnackbar]);
+  }, [dispatch, productId]);
 
   useEffect(() => {
-    dispatch(getSimilarProducts(product?.category));
-  }, [dispatch, product, product.category]);
-
+    if (product && product.category) {
+      dispatch(getSimilarProducts(product.category));
+    }
+  }, [dispatch, product]);
   return (
     <>
       {loading ? (
@@ -247,7 +243,7 @@ const ProductDetails = () => {
                   {/* <!-- price desc --> */}
 
                   {/* <!-- banks offers --> */}
-                  <p className="text-md font-medium">Available offers</p>
+                  {/* <p className="text-md font-medium">Available offers</p>
                   {Array(3)
                     .fill("")
                     .map((el, i) => (
@@ -262,7 +258,7 @@ const ProductDetails = () => {
                           T&C
                         </Link>
                       </p>
-                    ))}
+                    ))} */}
                   {/* <!-- banks offers --> */}
 
                   {/* <!-- warranty & brand --> */}
@@ -275,9 +271,9 @@ const ProductDetails = () => {
                     />
                     <span>
                       {product.warranty} Year Warranty{" "}
-                      <Link className="font-medium text-primary-blue" to="/">
+                      {/* <Link className="font-medium text-primary-blue" to="/">
                         Know More
-                      </Link>
+                      </Link> */}
                     </span>
                   </div>
                   {/* <!-- warranty & brand --> */}
@@ -327,10 +323,8 @@ const ProductDetails = () => {
                         </li>
                         <li>
                           <p className="flex items-center gap-3">
-                            <span className="text-primary-blue">
-                              <CurrencyRupeeIcon sx={{ fontSize: "18px" }} />
-                            </span>{" "}
-                            Cash on Delivery available
+                            <span className="text-primary-blue">$</span> Cash on
+                            Delivery available
                           </p>
                         </li>
                       </ul>
@@ -524,10 +518,10 @@ const ProductDetails = () => {
 
             {/* Sliders */}
             <div className="flex flex-col gap-3 mt-6">
-              <ProductSlider
+              {/* <ProductSlider
                 title={"Similar Products"}
                 tagline={"Based on the category"}
-              />
+              /> */}
             </div>
           </main>
         </>

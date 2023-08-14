@@ -1,11 +1,21 @@
 // Categories Used In Entire App
 export const categories = [
-    "Electronics",
-    "Mobiles",
-    "Laptops",
-    "Fashion",
-    "Appliances",
-    "Home",
+    "Shirts",
+    "Caps",
+    "Hoodies",
+    "Tote Bags",
+    "Mugs",
+    "Keychains",
+    "Posters",
+    "Stickers",
+    "Phone Cases",
+    "Beanies",
+    "Sweatpants",
+    "Socks",
+    "Notebooks",
+    "Water Bottles",
+    "Pins",
+    // Add more categories as needed
 ];
 
 // Product Sliders Offers

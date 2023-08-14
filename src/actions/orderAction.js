@@ -28,11 +28,12 @@ export const newOrder = (order) => async (dispatch) => {
 };
 
 // Get User Orders
-export const myOrders = () => async (dispatch) => {
+export const myOrders = () => async (dispatch, getState) => {
     try {
+        const { user } = getState().user; // Get the user object from Redux state
         dispatch({ type: MY_ORDERS_REQUEST });
 
-        const { data } = await axios.get('/api/v1/orders/me');
+        const { data } = await axios.post('/api/v1/orders/me', { user: user._id });
 
         dispatch({
             type: MY_ORDERS_SUCCESS,

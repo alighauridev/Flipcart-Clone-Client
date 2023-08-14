@@ -83,25 +83,19 @@ const Sidebar = ({ activeTab }) => {
           >
             Profile Information
           </Link>
-          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
-            Manage Addresses
-          </Link>
-          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
-            PAN Card Information
-          </Link>
         </div>
         {/* <!-- account settings tab --> */}
 
         {/* <!-- payments tab --> */}
-        <div className="flex items-center gap-5 px-4 py-4">
+        {/* <div className="flex items-center gap-5 px-4 py-4">
           <span className="text-[#24292e]">
             <AccountBalanceWalletIcon />
           </span>
           <p className="flex w-full justify-between font-medium text-gray-1000">
             PAYMENTS
           </p>
-        </div>
-        <div className="flex flex-col pb-3 border-b text-sm">
+        </div> */}
+        {/* <div className="flex flex-col pb-3 border-b text-sm">
           <Link
             className="p-3 pl-14 hover:bg-gray-100 flex justify-between pr-6"
             to="/"
@@ -115,11 +109,11 @@ const Sidebar = ({ activeTab }) => {
           <Link className="p-3 pl-14 hover:bg-gray-100 " to="/">
             Saved Cards
           </Link>
-        </div>
+        </div> */}
         {/* <!-- payments tab --> */}
 
         {/* <!-- my chats tab --> */}
-        <div className="flex items-center gap-5 px-4 py-4 border-b">
+        {/* <div className="flex items-center gap-5 px-4 py-4 border-b">
           <span className="text-[#24292e]">
             <ChatIcon />
           </span>
@@ -132,7 +126,7 @@ const Sidebar = ({ activeTab }) => {
               <ChevronRightIcon />
             </span>
           </Link>
-        </div>
+        </div> */}
         {/* <!-- my chats tab --> */}
 
         {/* <!-- my stuff tab --> */}
@@ -145,15 +139,15 @@ const Sidebar = ({ activeTab }) => {
           </p>
         </div>
         <div className="flex flex-col pb-3 border-b text-sm">
-          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
+          {/* <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             My Coupons
-          </Link>
-          <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
+          </Link> */}
+          {/* <Link className="p-3 pl-14 hover:bg-gray-100" to="/">
             My Reviews & Ratings
-          </Link>
-          <Link className="p-3 pl-14 hover:bg-bgray-100" to="/">
+          </Link> */}
+          {/* <Link className="p-3 pl-14 hover:bg-bgray-100" to="/">
             All Notifications
-          </Link>
+          </Link> */}
           <Link
             to="/wishlist"
             className={`${
@@ -192,7 +186,7 @@ const Sidebar = ({ activeTab }) => {
         <div className="flex gap-2.5 text-xs text-gray-1000">
           <Link to="/password/update">Change Password</Link>
           <Link to="/orders">Track Order</Link>
-          <Link to="/">Help Center</Link>
+          {/* <Link to="/">Help Center</Link> */}
         </div>
       </div>
       {/* <!-- frequenty visited tab --> */}
