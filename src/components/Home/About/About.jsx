@@ -14,7 +14,7 @@ const About = () => {
                 alt="About-Img-1"
                 className="w-[100%] object-contain"
               />
-              <div className="img_des">
+              <div className="img_des transition-all">
                 <span>Best Action Game</span>
                 <h1>DEAD RISING ZOMBIES</h1>
                 <button>
@@ -26,15 +26,14 @@ const About = () => {
               <img
                 src={img2}
                 alt="About-Img-2"
-                className="w-[100%]
+                className="w-[100%] 
             
             object-contain"
               />
-              <div className="img_des">
+              <div className="img_des transition-all">
                 <span>3D Pixel Racing</span>
                 <h1>FAST DRIVE RACING</h1>
                 <button>
-                  {" "}
                   <a href="#">Shop Now</a>
                 </button>
               </div>

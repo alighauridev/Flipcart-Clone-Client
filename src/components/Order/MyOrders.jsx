@@ -109,7 +109,7 @@ const MyOrders = () => {
             <MetaData title="My Orders | MNFST" />
 
             {/* <MinCategory /> */}
-            <main className="w-full mt-16 sm:mt-0">
+            <main className="w-full mt-16 sm:mt-0 pt-[80px]">
 
                 {/* <!-- row --> */}
                 <div className="flex gap-3.5 mt-2 sm:mt-6 sm:mx-3 m-auto mb-7">
@@ -189,7 +189,7 @@ const MyOrders = () => {
                                 {/* <!-- searchbar --> */}
                                 <form onSubmit={searchOrders} className="flex items-center justify-between mx-1 sm:mx-0 sm:w-10/12 bg-white border rounded hover:shadow">
                                     <input value={search} onChange={(e) => setSearch(e.target.value)} type="search" name="search" placeholder="Search your orders here" className="p-2 text-sm outline-none flex-1 rounded-l" />
-                                    <button type="submit" className="h-full text-sm px-1 sm:px-4 py-2.5 text-white bg-primary-blue hover:bg-blue-600 rounded-r flex items-center gap-1">
+                                    <button type="submit" className="h-full text-sm px-1 sm:px-4 py-2.5 text-white bg-[#24292e] rounded-r flex items-center gap-1">
                                         <SearchIcon sx={{ fontSize: "22px" }} />
                                         Search Orders
                                     </button>

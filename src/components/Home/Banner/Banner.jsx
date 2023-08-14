@@ -59,7 +59,7 @@ const Banner = () => {
               <div className="slider_wrapper flex flex-column relative content-center align-middle ">
                 <img
                   draggable="false"
-                  className="  h-[82vh]  w-full object-cover"
+                  className="  h-[88.9vh]  w-full object-cover"
                   src={el.img}
                   alt={el.heading}
                   key={i}
