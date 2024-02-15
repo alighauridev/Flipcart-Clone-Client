@@ -22,30 +22,30 @@ const instance = axios.create({
 });
 
 //Response Interceptor for refreshing token
-instance.interceptors.response.use(
-  (response) => response,
-  async (error) => {
-    const originalRequest = error.config;
-    if (error.response.status === 401 && !originalRequest._retry) {
-      originalRequest._retry = true;
-      const refreshToken = await get("refreshToken");
-      const res = await instance.post("/auth/RefreshAccessToken", {
-        refreshToken: refreshToken,
-      });
-      if (res.status === 201 || res.status === 200) {
-        const accessToken = res.data.accessToken;
-        await save("accessToken", accessToken);
-        instance.defaults.headers.common["Authorization"] =
-          "Bearer " + accessToken;
-        return instance(originalRequest);
-      } else {
-        console.log("not logged in");
-        return Promise.reject(error);
-      }
-    } else {
-      return Promise.reject(error);
-    }
-  }
-);
+// instance.interceptors.response.use(
+//   (response) => response,
+//   async (error) => {
+//     const originalRequest = error.config;
+//     if (error.response.status === 401 && !originalRequest._retry) {
+//       originalRequest._retry = true;
+//       const refreshToken = await get("refreshToken");
+//       const res = await instance.post("/auth/RefreshAccessToken", {
+//         refreshToken: refreshToken,
+//       });
+//       if (res.status === 201 || res.status === 200) {
+//         const accessToken = res.data.accessToken;
+//         await save("accessToken", accessToken);
+//         instance.defaults.headers.common["Authorization"] =
+//           "Bearer " + accessToken;
+//         return instance(originalRequest);
+//       } else {
+//         console.log("not logged in");
+//         return Promise.reject(error);
+//       }
+//     } else {
+//       return Promise.reject(error);
+//     }
+//   }
+// );
 
 export default instance;

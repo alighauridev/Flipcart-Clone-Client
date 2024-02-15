@@ -105,10 +105,20 @@ export const registerUser = (userData) => async (dispatch) => {
 // Load User
 export const loadUser = () => async (dispatch) => {
     try {
-
         dispatch({ type: LOAD_USER_REQUEST });
 
-        const { data } = await axios.get('/api/v1/me');
+        // Retrieve the token from local storage
+        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+        // Set up the headers with the token
+        const config = {
+            headers: {
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        };
+
+        // Make a GET request to your API with the configured headers
+        const { data } = await axios.get('/api/v1/me', config);
 
         dispatch({
             type: LOAD_USER_SUCCESS,
